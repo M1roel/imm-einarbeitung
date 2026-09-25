@@ -1,0 +1,64 @@
+<section class="check" aria-labelledby="knowledge-title">
+  <div class="check__header">
+    <div>
+      <p class="eyebrow">Verständnis prüfen</p>
+      <h2 id="knowledge-title">Vier Fragen zum Ablauf</h2>
+    </div>
+    <span>Einfach- und Mehrfachauswahl</span>
+  </div>
+
+  @for (question of questions(); track question.id; let index = $index) {
+    <fieldset
+      [class.is-correct]="submitted() && isQuestionCorrect(question)"
+      [class.is-wrong]="submitted() && !isQuestionCorrect(question)"
+    >
+      <legend>
+        <span>{{ index + 1 }}</span
+        >{{ question.prompt }}
+      </legend>
+      <p class="question-type">
+        {{ question.type === 'single' ? 'Eine Antwort' : 'Mehrere Antworten' }}
+      </p>
+      <div class="options">
+        @for (option of question.options; track option.id) {
+          <label>
+            <input
+              [type]="question.type === 'single' ? 'radio' : 'checkbox'"
+              [name]="question.id"
+              [checked]="isSelected(question.id, option.id)"
+              (change)="select(question, option.id)"
+            />
+            <span>{{ option.label }}</span>
+          </label>
+        }
+      </div>
+      @if (submitted()) {
+        <div class="feedback" role="status">
+          <strong>{{ isQuestionCorrect(question) ? 'Richtig' : 'Noch nicht richtig' }}</strong>
+          <p>{{ question.rationale }}</p>
+          <small>{{ question.source }}</small>
+        </div>
+      }
+    </fieldset>
+  }
+
+  <div class="check__actions">
+    <button
+      class="button button--primary"
+      type="button"
+      [disabled]="!allAnswered()"
+      (click)="checkAnswers()"
+    >
+      Antworten prüfen
+    </button>
+    @if (submitted()) {
+      <p class="result" role="status" [class.result--success]="allCorrect()">
+        {{
+          allCorrect()
+            ? 'Alle Antworten sind richtig. Der Verständnisnachweis ist erfüllt.'
+            : 'Mindestens eine Antwort ist noch falsch. Prüfen Sie die Hinweise und versuchen Sie es erneut.'
+        }}
+      </p>
+    }
+  </div>
+</section>

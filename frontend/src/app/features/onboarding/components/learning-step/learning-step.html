@@ -1,0 +1,12 @@
+<article class="step">
+  <span class="step__number" aria-hidden="true">{{ step().number }}</span>
+  <div class="step__body">
+    <h3>{{ step().title }}</h3>
+    <p>{{ step().description }}</p>
+    <app-source-reference
+      [label]="step().source.label"
+      [detail]="step().source.detail"
+      [status]="step().source.status"
+    />
+  </div>
+</article>

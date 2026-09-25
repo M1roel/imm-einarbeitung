@@ -1,0 +1,33 @@
+<div class="page path-page">
+  <header class="page-header">
+    <p class="eyebrow">Einarbeitungsplan IMM</p>
+    <h1>Ihr Lernpfad in neun Bereichen</h1>
+    <p class="muted">
+      Die Übersicht folgt Abschnitt 6 des Einarbeitungsplans, Version 02 vom 18.10.2021. Aktuell ist
+      nur ein Modul innerhalb von „Leihinstrumente managen“ ausgearbeitet.
+    </p>
+  </header>
+
+  <ol class="path" aria-label="Neun fachliche Lernbereiche">
+    @for (unit of units; track unit.number) {
+      <li class="path__item" [class.path__item--available]="unit.state === 'available'">
+        <span class="path__number" aria-hidden="true">{{ unit.number }}</span>
+        <div class="path__content">
+          <div class="path__heading">
+            <h2>{{ unit.title }}</h2>
+            <app-status-badge
+              [label]="unit.state === 'available' ? 'Modul verfügbar' : 'Noch nicht ausgearbeitet'"
+              [tone]="unit.state === 'available' ? 'success' : 'neutral'"
+            />
+          </div>
+          @if (unit.moduleTitle && unit.route) {
+            <p>{{ unit.moduleTitle }}</p>
+            <a class="button button--primary" [routerLink]="unit.route">Modul öffnen</a>
+          } @else {
+            <p class="muted">Für diesen Bereich sind noch keine Lerninhalte hinterlegt.</p>
+          }
+        </div>
+      </li>
+    }
+  </ol>
+</div>

@@ -1,0 +1,118 @@
+.dashboard {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-7);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: clamp(var(--space-6), 5vw, 4rem);
+  color: white;
+  background: linear-gradient(135deg, var(--color-navy-950), #1c5065);
+  box-shadow: var(--shadow-md);
+}
+
+.hero h1 {
+  max-width: 42rem;
+  margin-bottom: var(--space-4);
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero .eyebrow,
+.hero__copy {
+  color: #c6e5e3;
+}
+
+.hero__copy {
+  max-width: 42rem;
+  font-size: 1.08rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.hero .button--primary {
+  color: var(--color-navy-950);
+  background: #79d4cc;
+}
+
+.hero .button--secondary {
+  border-color: rgb(255 255 255 / 35%);
+  color: white;
+  background: rgb(255 255 255 / 8%);
+}
+
+.hero__metric {
+  width: 10rem;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  background: rgb(255 255 255 / 8%);
+}
+
+.hero__metric strong {
+  display: block;
+  font-size: 3rem;
+}
+
+.hero__metric strong span,
+.hero__metric p {
+  color: #bcd2dc;
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+  gap: var(--space-5);
+}
+
+.module-card,
+.notice {
+  padding: var(--space-6);
+}
+
+.module-card__topline,
+.module-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.module-card h2 {
+  margin-block: var(--space-4) var(--space-3);
+}
+
+.module-card__meta {
+  margin-block: var(--space-5);
+  border-block: 1px solid var(--color-border);
+  padding-block: var(--space-3);
+}
+
+.notice {
+  background: var(--color-warning-soft);
+}
+
+@media (max-width: 55rem) {
+  .hero,
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__metric {
+    width: 100%;
+    text-align: start;
+  }
+}

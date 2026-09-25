@@ -1,0 +1,53 @@
+<div class="page dashboard">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">IMM Onboarding</p>
+      <h1>Fachwissen nachvollziehbar lernen</h1>
+      <p class="hero__copy">
+        Lerninhalte, Verständnis, Übung und bestätigte Praxis bleiben klar voneinander getrennt.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" routerLink="/lernpfad">Lernpfad öffnen</a>
+        <a class="button button--secondary" routerLink="/lernmodule/leihset-aus-schablone-anlegen"
+          >Aktuelles Modul</a
+        >
+      </div>
+    </div>
+    <div class="hero__metric" aria-label="Ein von neun Lernbereichen ist derzeit ausgearbeitet">
+      <strong>1<span>/9</span></strong>
+      <p>Lernbereiche mit Inhalt</p>
+    </div>
+  </header>
+
+  <section class="dashboard__grid" aria-label="Aktueller Lernbereich">
+    <article class="module-card card">
+      <div class="module-card__topline">
+        <span>Lernpfad 6 · Leihinstrumente managen</span>
+        <app-status-badge label="Entwurf – in fachlicher Prüfung" tone="draft" />
+      </div>
+      <h2>Neues Leihset aus einer vorhandenen Schablone anlegen</h2>
+      <p>
+        Ein erster interaktiver Ablauf für Instacount 4.42 mit Stop-Punkten, Setcode,
+        Lieferschein-Ausnahme, Fotodokumentation und Etikettenberechnung.
+      </p>
+      <div class="module-card__meta">
+        <span>Standortübergreifend vorgesehen</span>
+        <span>{{ progressStore.completedLearningStages() }} von 3 Lernstufen abgeschlossen</span>
+      </div>
+      <a class="button button--primary" routerLink="/lernmodule/leihset-aus-schablone-anlegen"
+        >Modul bearbeiten</a
+      >
+    </article>
+
+    <aside class="notice card">
+      <p class="eyebrow">Wichtiger Status</p>
+      <h2>Keine formale Freigabe</h2>
+      <p>
+        Der dargestellte Ablauf ist eine dokumentierte fachliche Auskunft vom 25.09.2026 und noch
+        kein formal standortübergreifend freigegebener Standard.
+      </p>
+    </aside>
+  </section>
+
+  <app-progress-indicator [progress]="progressStore.progress()" />
+</div>

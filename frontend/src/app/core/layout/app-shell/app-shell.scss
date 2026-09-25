@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 20;
+  inset: var(--space-3) auto auto var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  color: white;
+  background: var(--color-navy-950);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.shell {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: 17rem minmax(0, 1fr);
+}
+
+.shell__body {
+  min-width: 0;
+}
+
+.shell__content {
+  min-height: calc(100dvh - 4.5rem);
+}
+
+@media (max-width: 62rem) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+}

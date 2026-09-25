@@ -1,0 +1,41 @@
+<section class="exercise" aria-labelledby="exercise-title">
+  <div>
+    <p class="eyebrow">Synthetische Übung</p>
+    <h2 id="exercise-title">Drei Fälle klar unterscheiden</h2>
+    <p class="muted">
+      Bearbeiten Sie alle Checklisten. Es werden ausschließlich erfundene Demo-Daten verwendet.
+    </p>
+  </div>
+
+  <div class="exercise__grid">
+    @for (scenario of scenarios(); track scenario.id) {
+      <article class="scenario" [class]="'scenario scenario--' + scenario.tone">
+        <h3>{{ scenario.title }}</h3>
+        <p>{{ scenario.introduction }}</p>
+        <div class="tasks">
+          @for (task of scenario.tasks; track task.id) {
+            <label>
+              <input type="checkbox" [checked]="isSelected(task.id)" (change)="toggle(task.id)" />
+              <span>{{ task.label }}</span>
+            </label>
+          }
+        </div>
+      </article>
+    }
+  </div>
+
+  <div class="exercise__actions">
+    <button class="button button--primary" type="button" (click)="evaluate()">
+      Übung auswerten
+    </button>
+    @if (submitted()) {
+      <p role="status" [class.is-success]="allTasksDone()">
+        {{
+          allTasksDone()
+            ? 'Alle drei Fälle wurden vollständig bearbeitet.'
+            : 'Die Übung ist noch nicht vollständig. Prüfen Sie alle drei Fälle.'
+        }}
+      </p>
+    }
+  </div>
+</section>

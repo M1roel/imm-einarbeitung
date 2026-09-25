@@ -1,0 +1,27 @@
+<section class="progress" [class.progress--compact]="compact()" aria-labelledby="progress-title">
+  <div class="progress__header">
+    <div>
+      <p class="eyebrow">Ihr Stand</p>
+      <h2 id="progress-title">Vier getrennte Nachweise</h2>
+    </div>
+    <span>nur diese Sitzung</span>
+  </div>
+  <ol>
+    <li [class.is-complete]="progress().contentViewed">
+      <span aria-hidden="true">{{ progress().contentViewed ? '✓' : '1' }}</span>
+      <div><strong>Inhalt angesehen</strong><small>Selbstberichteter Lernschritt</small></div>
+    </li>
+    <li [class.is-complete]="progress().knowledgeChecked">
+      <span aria-hidden="true">{{ progress().knowledgeChecked ? '✓' : '2' }}</span>
+      <div><strong>Verständnis geprüft</strong><small>Alle Fragen richtig beantwortet</small></div>
+    </li>
+    <li [class.is-complete]="progress().exerciseCompleted">
+      <span aria-hidden="true">{{ progress().exerciseCompleted ? '✓' : '3' }}</span>
+      <div><strong>Übung bearbeitet</strong><small>Synthetische Fälle abgeschlossen</small></div>
+    </li>
+    <li class="is-locked" [class.is-complete]="progress().practiceConfirmed">
+      <span aria-hidden="true">▣</span>
+      <div><strong>Praxis bestätigt</strong><small>Durch berechtigte Fachrolle</small></div>
+    </li>
+  </ol>
+</section>

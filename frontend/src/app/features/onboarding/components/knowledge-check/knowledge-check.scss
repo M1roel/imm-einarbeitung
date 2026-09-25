@@ -1,0 +1,122 @@
+.check {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.check__header,
+.check__actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.check__header h2 {
+  margin: var(--space-1) 0 0;
+}
+
+.check__header > span,
+.question-type {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+fieldset {
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  background: var(--color-surface);
+}
+
+fieldset.is-correct {
+  border-color: #97c7ab;
+}
+
+fieldset.is-wrong {
+  border-color: #dfaaa6;
+}
+
+legend {
+  max-width: 55rem;
+  padding: 0 var(--space-2);
+  color: var(--color-navy-950);
+  font-weight: 800;
+}
+
+legend span {
+  display: inline-grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  margin-inline-end: var(--space-2);
+  border-radius: 50%;
+  color: white;
+  background: var(--color-navy-900);
+  font-size: 0.78rem;
+}
+
+.options {
+  display: grid;
+  gap: var(--space-2);
+}
+
+label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  cursor: pointer;
+}
+
+label:has(input:checked) {
+  border-color: var(--color-teal-700);
+  background: var(--color-teal-100);
+}
+
+input {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  accent-color: var(--color-teal-700);
+}
+
+.feedback {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-4);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  background: var(--color-surface-soft);
+}
+
+.feedback p,
+.feedback small,
+.result {
+  margin: 0;
+}
+
+.feedback small {
+  color: var(--color-muted);
+}
+
+.result {
+  max-width: 40rem;
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.result--success {
+  color: var(--color-success);
+}
+
+@media (max-width: 42rem) {
+  .check__header,
+  .check__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

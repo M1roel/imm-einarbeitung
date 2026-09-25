@@ -1,0 +1,16 @@
+<div class="source">
+  <div>
+    <strong>{{ label() }}</strong>
+    <p>{{ detail() }}</p>
+  </div>
+  <app-status-badge
+    [label]="status()"
+    [tone]="
+      status() === 'quellenbelegt'
+        ? 'info'
+        : status() === 'Plattformvorschlag'
+          ? 'neutral'
+          : 'warning'
+    "
+  />
+</div>

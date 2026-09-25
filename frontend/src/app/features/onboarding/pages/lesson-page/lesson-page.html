@@ -1,0 +1,283 @@
+<div class="lesson-page">
+  <header class="lesson-hero">
+    <div class="lesson-hero__inner">
+      <a class="back-link" routerLink="/lernpfad">← Zurück zum Lernpfad</a>
+      <div class="lesson-hero__badges">
+        <app-status-badge label="Entwurf – in fachlicher Prüfung" tone="draft" />
+        <app-status-badge label="Instacount 4.42" tone="info" />
+        <app-status-badge label="Standortübergreifend vorgesehen" tone="neutral" />
+      </div>
+      <p class="eyebrow">Leihinstrumente managen · Lernmodul 1</p>
+      <h1>Neues Leihset aus einer vorhandenen Schablone anlegen</h1>
+      <p class="lesson-hero__lead">
+        Sie können die Voraussetzungen prüfen, den Setcode bilden, ein Set aus einer passenden
+        Schablone erzeugen und regulären Weg, Stop-Punkt und Lieferschein-Ausnahme unterscheiden.
+      </p>
+      <div class="lesson-hero__meta">
+        <span
+          ><strong>Zielgruppe</strong> IMM-Beschäftigte mit erforderlicher
+          Instacount-Berechtigung</span
+        >
+        <span
+          ><strong>Fachstand</strong> Auskunft vom 25.09.2026, noch nicht formal freigegeben</span
+        >
+      </div>
+    </div>
+  </header>
+
+  <div class="lesson-layout">
+    <main class="lesson-content">
+      <section class="content-section" id="start">
+        <div class="section-heading">
+          <p class="eyebrow">Vor dem Start</p>
+          <h2>Voraussetzungen und Stop-Punkte</h2>
+        </div>
+        <div class="requirements">
+          <article class="requirement-card requirement-card--stop">
+            <h3>Nicht übersteuerbar</h3>
+            <ul>
+              <li>Leihset-Anmeldung für das konkrete Set</li>
+              <li>Herstellerangaben</li>
+              <li>Bewertung der Herstellerangaben</li>
+            </ul>
+          </article>
+          <article class="requirement-card">
+            <h3>Zusätzlich im regulären Weg</h3>
+            <ul>
+              <li>Lieferschein</li>
+              <li>Bestätigte Vollständigkeit</li>
+              <li>Passende geprüfte Schablone</li>
+              <li>Erforderliche Instacount-Berechtigung</li>
+            </ul>
+          </article>
+        </div>
+        <app-callout title="Stop: keine Aufbereitung" kind="stop">
+          <p>
+            Fehlt Anmeldung, Herstellerangabe oder Bewertung, oder gilt sie nicht für das konkrete
+            Leihset, darf keine Aufbereitung erfolgen. Weder Betriebsleitung noch erfahrene
+            IMM-Mitarbeitende können das übersteuern.
+          </p>
+        </app-callout>
+        <app-source-reference
+          label="Voraussetzungen und Stop-Regel"
+          detail="Fachliche Klärung vom 25.09.2026, Punkte 11, 21–22 und Abschnitte 4–6; einzelne Unterlagen historisch PDF-Seiten 16, 19, 21, 23 und 28."
+          status="fachliche Auskunft 25.09.2026"
+        />
+      </section>
+
+      <section class="content-section" id="scope">
+        <div class="section-heading">
+          <p class="eyebrow">Abgrenzung</p>
+          <h2>Was dieses Modul nicht behandelt</h2>
+        </div>
+        <ul class="boundary-list">
+          <li>keine Bewertung der Herstellerangaben</li>
+          <li>keine eigenständige Risikoeinstufung</li>
+          <li>keine Beschreibung von SPMi</li>
+          <li>keine Erstellung einer neuen Schablone</li>
+          <li>keine weiteren Ausnahmewege</li>
+        </ul>
+        <p class="status-note">Didaktische Abgrenzung: <strong>Plattformvorschlag</strong></p>
+      </section>
+
+      <section class="content-section" id="setcode">
+        <div class="section-heading">
+          <p class="eyebrow">Setcode</p>
+          <h2>Fünf Segmente in fester Reihenfolge</h2>
+          <p class="muted">Eine Leihset-Schablone ist am Bestandteil <code>-L-</code> erkennbar.</p>
+        </div>
+        <div class="code-builder" aria-label="Aufbau des Setcodes">
+          <span>MANDANT</span><b>-</b><span>FACHBEREICH</span><b>-</b><span>EINSATZ</span><b>-</b
+          ><span>L</span><b>-</b><span>NUMMER</span>
+        </div>
+        <div class="code-example">
+          <span>Synthetisches Beispiel</span>
+          <code>SIM-GY-O-L-032</code>
+        </div>
+        <ul class="detail-list">
+          <li>
+            Fachbereich und Einsatzbereich ergeben sich aus Anmeldung und vorgesehenem Einsatz.
+          </li>
+          <li>Kürzel vorab unter <strong>Stammdaten → Kostenstellen</strong> prüfen.</li>
+          <li>Die nächste laufende Nummer im passenden Setcode-Bereich verwenden.</li>
+          <li>Neue Mitarbeitende pflegen keine Kürzel; fehlende Einträge werden eskaliert.</li>
+        </ul>
+        <app-source-reference
+          label="Setcode-Regel"
+          detail="Fachliche Klärung vom 25.09.2026, Punkte 3–8; Grundstruktur historisch PDF-Seiten 1, 6–9 und 17."
+          status="fachliche Auskunft 25.09.2026"
+        />
+      </section>
+
+      <section class="content-section" id="steps">
+        <div class="section-heading">
+          <p class="eyebrow">Regulärer Weg</p>
+          <h2>Set aus vorhandener Schablone erzeugen</h2>
+        </div>
+        <div class="steps">
+          @for (step of steps; track step.number) {
+            <app-learning-step [step]="step" />
+          }
+        </div>
+      </section>
+
+      <section class="content-section exception" id="exception">
+        <div class="section-heading">
+          <p class="eyebrow">Einziger Ausnahmeweg</p>
+          <h2>Der Lieferschein fehlt vorübergehend</h2>
+        </div>
+        <app-callout title="Nur der Lieferschein darf fehlen" kind="warning">
+          <p>Anmeldung, Herstellerangaben und Bewertung müssen trotzdem gültig vorhanden sein.</p>
+        </app-callout>
+        <ol class="exception-steps">
+          <li>
+            <strong>Stoppen:</strong> regulären Weg nicht fortsetzen und unverzügliche Nachreichung
+            anfordern.
+          </li>
+          <li>
+            <strong>Freigabe:</strong> Betriebsleitung oder erfahrenen IMM-Mitarbeiter einbeziehen.
+          </li>
+          <li>
+            <strong>Vorläufig:</strong> erst nach Freigabe die Seriennummer
+            <code>01</code> verwenden.
+          </li>
+          <li>
+            <strong>Dokumentieren:</strong> Ausnahme auf der Anmeldung nachtragen und gegenzeichnen.
+          </li>
+          <li>
+            <strong>Pflichtnacharbeit:</strong> zuständiger IMM-Mitarbeiter ersetzt
+            <code>01</code> unmittelbar nach Eingang durch die Lieferscheinnummer.
+          </li>
+          <li>
+            <strong>Nachweis erhalten:</strong> die dokumentierte und gegengezeichnete Ausnahme
+            bleibt nachvollziehbar.
+          </li>
+        </ol>
+        <app-source-reference
+          label="Lieferschein-Ausnahme"
+          detail="Fachliche Klärung vom 25.09.2026, Punkt 22 und Abschnitt 6. Der technische Änderungsnachweis in Instacount ist noch offen."
+          status="fachliche Auskunft 25.09.2026"
+        />
+      </section>
+
+      <section class="content-section split-section" id="labels-photos">
+        <article>
+          <p class="eyebrow">Etiketten</p>
+          <h2>Menge nachvollziehbar berechnen</h2>
+          <div class="formula"><code>1 + C + S</code></div>
+          <ul>
+            <li><strong>1</strong> für die Anmeldung</li>
+            <li><strong>C</strong> = 1 mit Container, sonst 0</li>
+            <li><strong>S</strong> = Anzahl der Siebschalen</li>
+          </ul>
+          <p class="example-box">1 Container + 3 Siebschalen = <strong>5 Etiketten</strong></p>
+        </article>
+        <article>
+          <p class="eyebrow">Fotografie</p>
+          <h2>Jede Siebschale einzeln</h2>
+          <p>
+            Bei jedem Packvorgang nach Reinigung und Desinfektion wird nach dem Scan am Packplatz
+            jede Siebschale einzeln von oben fotografiert. Blaues Vlies ist der bevorzugte
+            Hintergrund.
+          </p>
+          <div class="photo-list" aria-label="Drei erforderliche Einzelaufnahmen im Beispiel">
+            <span>Schale 1 · Draufsicht</span>
+            <span>Schale 2 · Draufsicht</span>
+            <span>Schale 3 · Draufsicht</span>
+          </div>
+        </article>
+        <app-source-reference
+          label="Etiketten und Fotografie"
+          detail="Fachliche Klärung, Abschnitte 7–8; historisch PDF-Seiten 21, 36–37 und 39–50."
+          status="fachliche Auskunft 25.09.2026"
+        />
+      </section>
+
+      <section class="content-section" id="return">
+        <app-callout title="Späterer Lebenszyklus: Rückgabe" kind="info">
+          <p>
+            Bei der Rückgabe an den Verleiher wird das Set von der Schablone gelöst und auf
+            <code>Gesperrt</code> gesetzt. Dieser Schritt gehört nicht zur Erstanlage, bleibt aber
+            als Folgehandlung sichtbar.
+          </p>
+        </app-callout>
+        <app-source-reference
+          label="Rückgabe"
+          detail="Fachliche Klärung, Punkt 18; historisch PDF-Seiten 20 und 38."
+          status="quellenbelegt"
+        />
+      </section>
+
+      <section class="content-section" id="sources">
+        <div class="section-heading">
+          <p class="eyebrow">Transparenz</p>
+          <h2>Quellen- und Statusinformationen</h2>
+        </div>
+        <div class="source-list">
+          @for (source of sources; track source.label) {
+            <app-source-reference
+              [label]="source.label"
+              [detail]="source.detail"
+              [status]="source.status"
+            />
+          }
+        </div>
+      </section>
+
+      <section class="content-section content-section--interactive" id="knowledge">
+        <app-knowledge-check
+          [questions]="questions"
+          (completed)="progressStore.markKnowledgeChecked()"
+        />
+      </section>
+
+      <section class="content-section content-section--interactive" id="exercise">
+        <app-practice-exercise
+          [scenarios]="scenarios"
+          (completed)="progressStore.markExerciseCompleted()"
+        />
+      </section>
+
+      <section class="content-section" id="practice">
+        <app-practice-confirmation />
+      </section>
+
+      <section class="content-section open-questions" id="open-questions">
+        <div class="section-heading">
+          <p class="eyebrow">Vor der Freigabe</p>
+          <h2>Drei offene fachliche Fragen</h2>
+        </div>
+        <ol>
+          @for (question of openQuestions; track question) {
+            <li>{{ question }}</li>
+          }
+        </ol>
+      </section>
+    </main>
+
+    <aside class="lesson-aside" aria-label="Modulfortschritt">
+      <app-progress-indicator [progress]="progressStore.progress()" [compact]="true" />
+      <button
+        class="button button--primary view-button"
+        type="button"
+        [disabled]="progressStore.progress().contentViewed"
+        (click)="progressStore.markContentViewed()"
+      >
+        {{
+          progressStore.progress().contentViewed
+            ? 'Als angesehen markiert'
+            : 'Inhalt als angesehen markieren'
+        }}
+      </button>
+      <nav class="section-nav" aria-label="Inhaltsübersicht">
+        <strong>In diesem Modul</strong>
+        <a href="#start">Voraussetzungen</a>
+        <a href="#setcode">Setcode</a>
+        <a href="#steps">Schrittfolge</a>
+        <a href="#exception">Ausnahmeweg</a>
+        <a href="#knowledge">Verständnisfragen</a>
+        <a href="#exercise">Übung</a>
+      </nav>
+    </aside>
+  </div>
+</div>
