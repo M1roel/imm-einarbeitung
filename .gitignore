@@ -1,6 +1,2 @@
 # Interne, nicht zu versionierende Quelldokumente
 source-documents/
-
-# Agenten und Skills
-AGENTS.md
-.agents/skills/
