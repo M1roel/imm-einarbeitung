@@ -37,25 +37,32 @@ Das Lernziel ist ein `Plattformvorschlag` auf Basis der `fachlichen Auskunft 25.
 
 ## 4. Voraussetzungen und Stop-Punkte
 
-### 4.1 Voraussetzungen für den regulären Weg
+### 4.1 Nicht übersteuerbare Voraussetzungen
 
-Vor dem regulären Anlegen müssen folgende Bestandteile vorhanden beziehungsweise geprüft sein — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben:
+Vor jeder Aufbereitung müssen die folgenden Bestandteile für das konkrete Leihset vorhanden sowie gültig beziehungsweise freigegeben sein — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben:
 
 - Leihset-Anmeldung,
-- Lieferschein,
 - Herstellerangaben,
-- Bewertung der Herstellerangaben,
+- Bewertung der Herstellerangaben.
+
+Fehlt einer dieser drei Bestandteile oder gilt er nicht für das konkrete Leihset, darf keine Aufbereitung erfolgen. Dafür gibt es keine Freigabe durch Betriebsleitung oder erfahrene IMM-Mitarbeiter — `fachliche Auskunft 25.09.2026`.
+
+### 4.2 Weitere Voraussetzungen für den regulären Weg
+
+Zusätzlich müssen im regulären Weg vorliegen beziehungsweise geprüft sein — `fachliche Auskunft 25.09.2026`:
+
+- Lieferschein,
 - bestätigte Vollständigkeit,
 - passende vorhandene Schablone,
 - erforderliche Instacount-Berechtigung.
 
-Teile davon sind historisch `quellenbelegt`: Vollständigkeitsprüfung anhand des Lieferscheins auf PDF-Seite 16, klassifizierte Position und Bewertung auf PDF-Seiten 19, 21 und 23 sowie Anmeldung und Lieferschein auf PDF-Seite 28. Berechtigung und vollständige Stop-Regel stammen aus der fachlichen Auskunft beziehungsweise der didaktischen Absicherung.
+Teile der Voraussetzungen sind historisch `quellenbelegt`: Vollständigkeitsprüfung anhand des Lieferscheins auf PDF-Seite 16, klassifizierte Position und Bewertung auf PDF-Seiten 19, 21 und 23 sowie Anmeldung und Lieferschein auf PDF-Seite 28. Berechtigung und vollständige Stop-/Nichtübersteuerungsregel stammen aus der fachlichen Auskunft beziehungsweise der didaktischen Absicherung.
 
-### 4.2 Stop-Regel
+### 4.3 Stop-Regel
 
-Fehlt eine erforderliche Unterlage oder Prüfung, wird im regulären Weg nicht weitergearbeitet — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben.
+Fehlt eine erforderliche Unterlage oder Prüfung, wird im regulären Weg nicht weitergearbeitet — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben. Ausschließlich für einen vorübergehend fehlenden Lieferschein ist der Ausnahmeweg aus Abschnitt 8 mit Freigabe, Nachdokumentation und späterer Korrektur vorgesehen.
 
-`Plattformvorschlag` — Das spätere Interface zeigt einen nicht übersehbaren Stop-Zustand und bietet keine reguläre Fortsetzen-Aktion. Ausschließlich für einen fehlenden Lieferschein wird der gesonderte Ausnahmeweg aus Abschnitt 8 angeboten. Andere Ausnahmefälle sind nicht bestätigt.
+`Plattformvorschlag` — Das spätere Interface zeigt einen nicht übersehbaren Stop-Zustand und bietet keine reguläre Fortsetzen-Aktion. Bei fehlender, ungültiger oder nicht freigegebener Anmeldung, Herstellerangabe oder Bewertung wird auch keine Ausnahmeaktion angeboten. Weitere Ausnahmefälle sind nicht bestätigt.
 
 ## 5. Abgrenzung
 
@@ -79,21 +86,21 @@ Die PDF belegt historisch den hierarchischen Aufbau und `-L-` als Leihset-Merkma
 
 | Segment | Vorgesehene Bedeutung | Status |
 | --- | --- | --- |
-| `MANDANT` | Mandantenkürzel | `fachliche Auskunft 25.09.2026`; verbindliche Kürzelliste offen |
-| `FACHBEREICH` | aus der Leihset-Anmeldung ermittelter Fachbereich; genannt wurden `UC` für Unfallchirurgie, `NC` für Wirbelsäulenchirurgie und `GY` für Gynäkologie | `fachliche Auskunft 25.09.2026`; Kürzelliste unvollständig und Pflege offen |
+| `MANDANT` | Mandantenkürzel | `fachliche Auskunft 25.09.2026`; verwendbares Kürzel vorab in Instacount prüfen |
+| `FACHBEREICH` | aus der Leihset-Anmeldung ermittelter Fachbereich; genannt wurden `UC` für Unfallchirurgie, `NC` für Wirbelsäulenchirurgie und `GY` für Gynäkologie | `fachliche Auskunft 25.09.2026`; verwendbares Kürzel unter `Stammdaten → Kostenstellen` prüfen; Pflege nur durch Administratoren oder erfahrene IMM-Mitarbeiter mit entsprechenden Instacount-Rechten |
 | `EINSATZBEREICH` | `O` für OP, `A` für Ambulanz, `S` für Station/Funktionsabteilung; bei Leihsets ist `O` der mitgeteilte Regelfall | Bedeutungen historisch `quellenbelegt` auf PDF-Seiten 6–9; Regelfall/Häufigkeit `fachliche Auskunft 25.09.2026` |
 | `L` | Kennzeichen für Leihset | `fachliche Auskunft 25.09.2026` und historisch `quellenbelegt` |
-| `LAUFENDE NUMMER` | nächste freie laufende Nummer | `fachliche Auskunft 25.09.2026`; Geltungsbereich der Nummernfolge offen |
+| `LAUFENDE NUMMER` | bei einem erstmals am Standort aufzubereitenden Leihset die nächste laufende Nummer innerhalb des passenden Setcode-Bereichs | `fachliche Auskunft 25.09.2026` |
+
+Vor Bildung des Setcodes sind die verwendbaren Kostenstellen- beziehungsweise Fachbereichskürzel in Instacount unter `Stammdaten → Kostenstellen` zu prüfen — `fachliche Auskunft 25.09.2026`. Pflegen dürfen die Kürzel ausschließlich Administratoren sowie erfahrene IMM-Mitarbeiter mit den entsprechenden Instacount-Rechten. Für neue Mitarbeitende ist die Pflege kein Lernziel dieses Moduls; fehlende oder unzutreffende Kürzel werden an eine berechtigte Rolle eskaliert.
 
 ### 6.2 Synthetisches Lernbeispiel
 
-`Plattformvorschlag` — Für den rein synthetischen Mandanten `SIM`, den Fachbereich `UC`, den Einsatzbereich `O` und eine bereits belegte höchste Nummer `197` ergibt sich im Übungsfall als nächster Code `SIM-UC-O-L-198`.
-
-Das Beispiel trainiert die mitgeteilte Bildung, legt aber den noch offenen Suchraum der laufenden Nummer nicht fest.
+`Plattformvorschlag` — Für ein neu eintreffendes, bisher nicht am synthetischen Standort aufbereitetes Leihset werden im passenden Setcode-Bereich `SIM-UC-O-L` die geprüften Kürzel `SIM`, `UC` und `O` verwendet. Ist dort `197` die bislang höchste vergebene laufende Nummer, lautet der neue Code im Übungsfall `SIM-UC-O-L-198`.
 
 ### 6.3 Bezeichnung
 
-Die Setbezeichnung wird aus der Leihset-Anmeldung übernommen — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben. Historisch verweist PDF-Seite 11 auf die Vorgabe der anfordernden Stelle, während PDF-Seite 22 außerdem Siebtitel und Verleiher-Artikelnummer nennt. Die verbindliche Feldzusammensetzung muss in der formalen Freigabe präzisiert werden.
+Die Setbezeichnung wird aus der Leihset-Anmeldung übernommen — `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben. Historisch verweist PDF-Seite 11 auf die Vorgabe der anfordernden Stelle, während PDF-Seite 22 außerdem Siebtitel und Verleiher-Artikelnummer nennt. Für diesen Entwurf ist die mitgeteilte Übernahme aus der Anmeldung maßgeblich.
 
 ## 7. Regulärer Ablauf
 
@@ -101,8 +108,8 @@ Alle Schritte bilden den vorgesehenen Arbeitsstand ab, sind aber noch nicht form
 
 | Schritt | Lerninhalt | Beleg und Status | Vorgesehene Darstellung |
 | ---: | --- | --- | --- |
-| 1 | Prüfe alle Voraussetzungen aus Abschnitt 4. Fehlt etwas, stoppe. | Vollständige Stop-Regel: `fachliche Auskunft 25.09.2026`; einzelne Unterlagen historisch `quellenbelegt` auf PDF-Seiten 16, 19, 21, 23 und 28 | `Plattformvorschlag`: Pflicht-Checkliste mit gesperrter Fortsetzen-Aktion |
-| 2 | Ermittle anhand von Anmeldung, Mandant, Fachbereich und Einsatzbereich den vorgesehenen Setcode und die nächste freie Nummer. Prüfe, dass `-L-` enthalten ist. | `fachliche Auskunft 25.09.2026`; Grundstruktur historisch `quellenbelegt` auf PDF-Seiten 1, 6–9 und 17 | `Plattformvorschlag`: Segment-Builder mit lesbarer Vorschau und Hinweis auf offene Kürzelliste |
+| 1 | Prüfe alle Voraussetzungen aus Abschnitt 4. Fehlt Anmeldung, Herstellerangabe oder Bewertung oder gilt eine davon nicht für das konkrete Leihset, stoppe ohne Übersteuerungsmöglichkeit; eine Aufbereitung darf nicht erfolgen. | Nicht übersteuerbare Stop-Regel: `fachliche Auskunft 25.09.2026`; einzelne Unterlagen historisch `quellenbelegt` auf PDF-Seiten 19, 21, 23 und 28 | `Plattformvorschlag`: Pflicht-Checkliste mit dauerhaft gesperrter Fortsetzen- und Ausnahmeaktion |
+| 2 | Ermittle Fachbereich und Einsatzbereich aus Anmeldung und vorgesehenem Einsatz. Prüfe die Kürzel in Instacount unter `Stammdaten → Kostenstellen`, ohne sie als neue mitarbeitende Person selbst zu pflegen. Bestimme für ein erstmals am Standort aufzubereitendes Leihset im passenden Setcode-Bereich die nächste laufende Nummer und prüfe `-L-`. | `fachliche Auskunft 25.09.2026`; Grundstruktur historisch `quellenbelegt` auf PDF-Seiten 1, 6–9 und 17 | `Plattformvorschlag`: Segment-Builder mit Stammdaten-Prüfnachweis, Eskalationshinweis und lesbarer Vorschau |
 | 3 | Übernimm die Bezeichnung aus der Leihset-Anmeldung und wähle die passende vorhandene Schablone. | Bezeichnung: `fachliche Auskunft 25.09.2026`; vorhandene entsprechende Schablone historisch `quellenbelegt` auf PDF-Seite 24 | `Plattformvorschlag`: Gegenüberstellung Anmeldung/Schablone mit Bestätigungsfeld |
 | 4 | Rufe an der ausgewählten Schablone „Set erzeugen“ auf und kontrolliere die angezeigte Ausgangsschablone und Setdaten. | Aktion und Dialog historisch `quellenbelegt` auf PDF-Seiten 24–25; Kontrollschritt `Plattformvorschlag` | `Plattformvorschlag`: bereinigter UI-Ausschnitt und Kontrollhinweis |
 | 5 | Trage im regulären Weg die Lieferscheinnummer als Seriennummer ein und erzeuge den neuen Setdatensatz. | `fachliche Auskunft 25.09.2026` und historisch `quellenbelegt` auf PDF-Seiten 22, 25 und 26 | `Plattformvorschlag`: markiertes Feld mit Quellenstatus; Ausnahme nicht in diesem Schritt vermischen |
@@ -114,13 +121,14 @@ Alle Schritte bilden den vorgesehenen Arbeitsstand ab, sind aber noch nicht form
 
 Dies ist der einzige derzeit mitgeteilte Ausnahmefall im fachlichen Arbeitsstand. Alle Schritte sind `fachliche Auskunft 25.09.2026`, noch nicht formal standortübergreifend freigegeben.
 
-1. **Stoppen:** Ohne Lieferschein nicht im regulären Weg weiterarbeiten.
-2. **Nachfordern:** Krankenhaus beziehungsweise OP zur unverzüglichen Nachreichung auffordern.
+1. **Zulässigkeit prüfen:** Der Weg darf nur geöffnet werden, wenn ausschließlich der Lieferschein vorübergehend fehlt. Anmeldung, Herstellerangaben und Bewertung müssen für das konkrete Set vorhanden sowie gültig beziehungsweise freigegeben sein.
+2. **Stoppen und nachfordern:** Ohne Lieferschein nicht im regulären Weg weiterarbeiten; Krankenhaus beziehungsweise OP zur unverzüglichen Nachreichung auffordern.
 3. **Ausnahmefreigabe einholen:** Freigabe durch Betriebsleitung oder erfahrenen IMM-Mitarbeiter einholen.
 4. **Nur nach Freigabe fortsetzen:** Seriennummer vorläufig auf `01` setzen.
-5. **Offen sichtbar halten:** Nachreichung, spätere Ersetzung von `01` und Ausnahmefreigabe müssen nachverfolgbar bleiben; genaue Dokumentations- und Ersetzungsregeln sind noch offen.
+5. **Ausnahme nachdokumentieren:** Die Ausnahme nachträglich auf der Leihset-Anmeldung dokumentieren und gegenzeichnen lassen.
+6. **Nach Eingang verpflichtend korrigieren:** Der zuständige IMM-Mitarbeiter ersetzt `01` unmittelbar durch die tatsächliche Lieferscheinnummer. Die auf der Anmeldung dokumentierte und gegengezeichnete Ausnahme bleibt auch nach der Korrektur nachvollziehbar. Offen ist nur der technische Nachweis beziehungsweise die Änderungshistorie in Instacount.
 
-`Plattformvorschlag` — Das Interface stellt diesen Weg als gesonderten, protokollpflichtigen Ausnahmezweig dar. Ohne dokumentierte Freigabe bleibt die Fortsetzen-Aktion gesperrt. Für fehlende Anmeldung, Herstellerangaben, Bewertung oder Vollständigkeitsprüfung wird keine Ausnahme angeboten, solange keine weitere fachliche Auskunft vorliegt.
+`Plattformvorschlag` — Das Interface stellt diesen Weg als gesonderten, protokollpflichtigen Ausnahmezweig dar. Ohne dokumentierte Freigabe bleibt die Fortsetzen-Aktion gesperrt. Fehlen Anmeldung, Herstellerangaben oder Bewertung oder sind sie für das Set nicht gültig beziehungsweise freigegeben, bleibt auch der Ausnahmezweig gesperrt. Dafür gibt es keine Übersteuerung. Weitere Ausnahmefälle sind derzeit nicht bekannt und werden nicht angeboten.
 
 ## 9. Etikettenmenge berechnen
 
@@ -143,23 +151,25 @@ Die PDF belegt auf PDF-Seiten 36–37 Etikettdruck und ein Etikett für die Anme
 
 ## 10. Setfotografie als wiederkehrende Vollständigkeitsdokumentation
 
-`fachliche Auskunft 25.09.2026` — Die Setfotografie ist kein einmaliges Stammdatenbild. Das Set wird bei jedem Packvorgang nach Reinigung und Desinfektion fotografiert, sobald es am Packplatz eingescannt wurde.
+`fachliche Auskunft 25.09.2026` — Die Setfotografie ist kein einmaliges Stammdatenbild. Das Set wird bei jedem Packvorgang nach Reinigung und Desinfektion fotografiert, sobald es am Packplatz eingescannt wurde. Bei mehreren Siebschalen wird jede einzelne Siebschale separat von oben fotografiert; als Hintergrund wird vorzugsweise ein blaues Vlies untergelegt.
 
-`fachliche Auskunft 25.09.2026` — Das Foto dokumentiert den Vollständigkeitszustand beim jeweiligen Eintreffen am Standort. Bei einem später fehlenden Instrument soll nachvollziehbar sein, ob es zwischen zwei Aufbereitungsdurchläufen im Krankenhaus beziehungsweise OP verloren gegangen sein kann.
+`fachliche Auskunft 25.09.2026` — Die Einzelaufnahmen dokumentieren den Vollständigkeitszustand beim jeweiligen Eintreffen am Standort. Bei einem später fehlenden Instrument soll nachvollziehbar sein, ob es zwischen zwei Aufbereitungsdurchläufen im Krankenhaus beziehungsweise OP verloren gegangen sein kann.
 
-Historisch `quellenbelegt` sind die Fotografie nach jedem Packvorgang und der Reklamationsbezug auf PDF-Seite 21 sowie der technische Fotoablauf auf PDF-Seiten 39–50. Anzahl, Perspektiven und Qualitätsanforderungen der Fotos bleiben offen.
+Historisch `quellenbelegt` sind die Fotografie nach jedem Packvorgang und der Reklamationsbezug auf PDF-Seite 21 sowie der technische Fotoablauf auf PDF-Seiten 39–50. Offen bleiben zusätzliche verbindliche Vorgaben zu Bildqualität, Dateiformat und Aufbewahrungsdauer.
 
 ## 11. Typische Fehler und Stop-Situationen
 
 | Fehler oder Unsicherheit | Einordnung |
 | --- | --- |
-| Trotz fehlender Pflichtunterlagen im regulären Weg fortfahren | Widerspricht der `fachlichen Auskunft 25.09.2026`; Stop-Punkt |
+| Trotz fehlender, ungültiger oder nicht für das konkrete Leihset freigegebener Anmeldung, Herstellerangaben oder Bewertung fortfahren | Widerspricht der `fachlichen Auskunft 25.09.2026`; nicht übersteuerbarer Stop-Punkt, keine Aufbereitung |
 | Bei fehlendem Lieferschein ohne Freigabe weiterarbeiten oder `01` setzen | Widerspricht dem gesonderten Ausnahmeweg der `fachlichen Auskunft 25.09.2026`; Stop-Punkt |
-| Einen weiteren, nicht bestätigten Ausnahmefall annehmen | Nicht zulässig im Entwurf; `fachliche Auskunft 25.09.2026` bestätigt nur den fehlenden Lieferschein |
-| Falsche oder nicht als frei geprüfte laufende Nummer verwenden | `fachliche Auskunft 25.09.2026`; genaue Nummernreichweite offen |
+| Den Lieferschein-Ausnahmeweg auf fehlende Anmeldung, Herstellerangaben oder Bewertung übertragen | Nicht zulässig; diese Voraussetzungen sind laut `fachlicher Auskunft 25.09.2026` nicht übersteuerbar |
+| Einen weiteren, nicht bestätigten Ausnahmefall annehmen | Nicht zulässig im Entwurf; `fachliche Auskunft 25.09.2026` nennt nur den fehlenden Lieferschein |
+| Kürzel nicht unter `Stammdaten → Kostenstellen` prüfen oder eine Nummer außerhalb des passenden Setcode-Bereichs verwenden | Widerspricht der `fachlichen Auskunft 25.09.2026` |
+| Als neue mitarbeitende Person ein fehlendes oder unzutreffendes Kostenstellenkürzel selbst pflegen | Nicht Aufgabe dieses Moduls; Pflege nur durch Administratoren oder erfahrene IMM-Mitarbeiter mit entsprechenden Instacount-Rechten laut `fachlicher Auskunft 25.09.2026` |
 | Bezeichnung frei formulieren statt aus der Anmeldung übernehmen | Widerspricht der `fachlichen Auskunft 25.09.2026` |
 | Bewertung oder Einstufung in diesem Modul selbst verändern | Außerhalb des Modulumfangs; `Plattformvorschlag` |
-| Nur ein einmaliges Stammdatenbild anlegen | Widerspricht der wiederkehrenden Fotodokumentation laut `fachlicher Auskunft 25.09.2026` und PDF-Seite 21 |
+| Nur ein einmaliges Stammdatenbild anlegen, nicht von oben fotografieren oder bei mehreren Siebschalen nur eine gemeinsame Aufnahme erstellen | Widerspricht der wiederkehrenden Einzel-Fotodokumentation laut `fachlicher Auskunft 25.09.2026` und teilweise PDF-Seite 21 |
 | Container- oder Siebschalenetiketten bei der Mengenberechnung vergessen | Widerspricht der Etikettenregel der `fachlichen Auskunft 25.09.2026` |
 
 ## 12. Verständnisfragen
@@ -168,28 +178,28 @@ Historisch `quellenbelegt` sind die Fotografie nach jedem Packvorgang und der Re
 
 - **Status:** `Plattformvorschlag`; erwartete Antwort basiert auf `fachlicher Auskunft 25.09.2026`.
 - **Fragetyp:** Einfachauswahl
-- **Frage:** Im synthetischen Fall sind `SIM` als Mandant, `UC` als Fachbereich, `O` als Einsatzbereich und `198` als nächste freie Nummer vorgegeben. Welcher Code entspricht dem vorgesehenen Muster?
+- **Frage:** In `Stammdaten → Kostenstellen` wurden für den synthetischen Fall `SIM`, `UC` und `O` geprüft. Im passenden Setcode-Bereich ist `198` die nächste laufende Nummer. Welcher Code entspricht dem vorgesehenen Muster?
 - **Antwortmöglichkeiten:**
   - A: `SIM-L-UC-O-198`
   - B: `SIM-UC-O-L-198`
   - C: `UC-SIM-O-198-L`
   - D: `SIM-UC-L-O-198`
 - **Richtige Antwort:** B
-- **Begründung:** Das mitgeteilte Muster lautet Mandant–Fachbereich–Einsatzbereich–`L`–laufende Nummer.
+- **Begründung:** Das mitgeteilte Muster lautet Mandant–Fachbereich–Einsatzbereich–`L`–laufende Nummer; Kürzel sind vorher in den Kostenstellen-Stammdaten zu prüfen.
 - **Quellenbezug:** Fachliche Klärung vom 25.09.2026, Punkte 3–8; Grundstruktur ergänzend PDF-Seiten 1 und 6–9.
 
 ### Frage 2: Stop oder Ausnahmeweg
 
 - **Status:** `Plattformvorschlag`; erwartete Antwort basiert auf `fachlicher Auskunft 25.09.2026`.
 - **Fragetyp:** Einfachauswahl
-- **Frage:** Der Lieferschein fehlt, alle anderen Voraussetzungen sind im Übungsfall erfüllt. Was ist der nächste zulässige Schritt?
+- **Frage:** In welchem Fall darf der gesonderte Ausnahmeweg überhaupt geprüft werden?
 - **Antwortmöglichkeiten:**
-  - A: Ohne Rückfrage eine beliebige Seriennummer eintragen.
-  - B: Im regulären Weg fortfahren und den Lieferschein später ergänzen.
-  - C: Stoppen, unverzügliche Nachreichung anfordern und vor dem Fortsetzen die vorgesehene Ausnahmefreigabe einholen.
-  - D: Eine neue Schablone ohne Unterlagen anlegen.
-- **Richtige Antwort:** C
-- **Begründung:** `01` darf im mitgeteilten Ausnahmeweg erst nach Freigabe durch Betriebsleitung oder erfahrenen IMM-Mitarbeiter vorläufig verwendet werden.
+  - A: Ausschließlich der Lieferschein fehlt vorübergehend; Anmeldung, Herstellerangaben und Bewertung sind für das konkrete Set vorhanden und gültig beziehungsweise freigegeben.
+  - B: Die Herstellerangaben fehlen, die Betriebsleitung würde aber zustimmen.
+  - C: Die Bewertung fehlt, ein erfahrener IMM-Mitarbeiter würde aber zustimmen.
+  - D: Die Anmeldung passt nicht zum konkreten Set, soll jedoch später ersetzt werden.
+- **Richtige Antwort:** A
+- **Begründung:** Nur der vorübergehend fehlende Lieferschein hat einen Ausnahmeweg. Anmeldung, Herstellerangaben und Bewertung sind nicht übersteuerbar. Auch bei A wird zunächst gestoppt, die Nachreichung angefordert und vor `01` die Ausnahmefreigabe eingeholt.
 - **Quellenbezug:** Fachliche Klärung vom 25.09.2026, Punkt 22.
 
 ### Frage 3: Etiketten berechnen
@@ -214,10 +224,11 @@ Historisch `quellenbelegt` sind die Fotografie nach jedem Packvorgang und der Re
 - **Antwortmöglichkeiten:**
   - A: Sie ist ein einmaliges Stammdatenbild.
   - B: Sie erfolgt bei jedem Packvorgang nach Reinigung und Desinfektion, sobald das Set am Packplatz eingescannt wurde.
-  - C: Sie dokumentiert den Vollständigkeitszustand des jeweiligen Durchlaufs.
+  - C: Bei mehreren Siebschalen wird jede Schale einzeln von oben fotografiert; ein blaues Vlies ist der bevorzugte Hintergrund.
   - D: Sie ersetzt die Herstellerbewertung.
-- **Richtige Antworten:** B und C
-- **Begründung:** Die Fotografie ist eine wiederkehrende Vollständigkeitsdokumentation und keine Bewertung oder einmalige Stammdatenaufnahme.
+  - E: Sie dokumentiert den Vollständigkeitszustand des jeweiligen Durchlaufs.
+- **Richtige Antworten:** B, C und E
+- **Begründung:** Die Fotografie ist eine wiederkehrende Vollständigkeitsdokumentation mit je einer Einzelaufnahme jeder Siebschale in Draufsicht und bevorzugtem Hintergrund, keine Bewertung oder einmalige Stammdatenaufnahme.
 - **Quellenbezug:** Fachliche Klärung vom 25.09.2026, Punkte 16–17; Anleitung, PDF-Seite 21 und PDF-Seiten 39–50.
 
 ## 13. Praktische Übungsaufgabe
@@ -230,8 +241,9 @@ Für die Lernumgebung liegen vor:
 
 - Mandant `SIM`,
 - Leihset-Anmeldung mit Fachbereich `GY`, Einsatzbereich `O` und Bezeichnung „Demo-Leihset Gamma“,
+- in `Stammdaten → Kostenstellen` geprüfte synthetische Kürzel `SIM`, `GY` und `O`,
 - passende geprüfte Schablone,
-- höchste im vorgegebenen Suchraum belegte Nummer `031`,
+- erstmaliges Eintreffen dieses Leihsets am synthetischen Standort und höchste Nummer `031` im passenden Setcode-Bereich `SIM-GY-O-L`,
 - Lieferscheinnummer `LS-SIM-2026-0042`,
 - geprüfte Herstellerangaben und Bewertung,
 - bestätigte Vollständigkeit,
@@ -239,17 +251,17 @@ Für die Lernumgebung liegen vor:
 
 Aufgaben:
 
-1. Dokumentiere die Prüfung der Voraussetzungen.
-2. Bilde den im Szenario erwarteten Setcode `SIM-GY-O-L-032`.
+1. Dokumentiere die Prüfung der nicht übersteuerbaren und der weiteren Voraussetzungen.
+2. Weise die Prüfung der Kürzel in den Kostenstellen-Stammdaten nach und bilde den erwarteten Setcode `SIM-GY-O-L-032`.
 3. Wähle die vorgegebene Schablone, rufe „Set erzeugen“ auf und verwende `LS-SIM-2026-0042` als Seriennummer.
 4. Kontrolliere die übernommenen Herstellerangaben und die Bewertung, ohne sie zu verändern.
-5. Ordne die synthetischen Dateien `Anmeldung-SIM.pdf`, `Lieferschein-SIM.pdf` und `Setfoto-SIM.jpg` dem Set zu.
+5. Ordne die synthetischen Dateien `Anmeldung-SIM.pdf`, `Lieferschein-SIM.pdf`, `Setfoto-Schale-01-SIM.jpg`, `Setfoto-Schale-02-SIM.jpg` und `Setfoto-Schale-03-SIM.jpg` dem Set zu. Weise damit für jede der drei Siebschalen eine eigene Aufnahme nach.
 6. Berechne `1 + 1 + 3 = 5` Etiketten und begründe jede Teilmenge.
-7. Beschreibe, wann erneut fotografiert werden muss und welchen Zustand das Bild dokumentiert.
+7. Beschreibe, wann erneut fotografiert werden muss, welchen Zustand die Einzelaufnahmen dokumentieren und wie Perspektive und bevorzugter Hintergrund vorgesehen sind.
 
 ### Teil B: Ausnahmeweg
 
-In einer zweiten Variante fehlt ausschließlich der Lieferschein. Alle übrigen Voraussetzungen sind als erfüllt markiert.
+In einer zweiten Variante fehlt ausschließlich der Lieferschein. Anmeldung, Herstellerangaben und Bewertung sind für das konkrete Set als vorhanden und gültig beziehungsweise freigegeben markiert; alle übrigen Voraussetzungen sind erfüllt.
 
 Aufgaben:
 
@@ -257,29 +269,43 @@ Aufgaben:
 2. Löse in der Simulation die Aufforderung zur unverzüglichen Nachreichung aus.
 3. Fordere eine simulierte Freigabe der zulässigen Rolle an.
 4. Setze `01` erst nach erteilter simulierter Freigabe als vorläufige Seriennummer.
-5. Markiere Nachreichung, spätere Ersetzung und Dokumentation der Freigabe als offene Folgepunkte.
-6. Benenne ausdrücklich, dass kein anderer Ausnahmefall aus dieser Regel abgeleitet werden darf.
+5. Dokumentiere die Ausnahme nachträglich auf der synthetischen Leihset-Anmeldung und lasse sie in der Simulation gegenzeichnen.
+6. Lass den zuständigen simulierten IMM-Mitarbeiter nach Eingang des Lieferscheins `01` unmittelbar durch `LS-SIM-2026-0099` ersetzen. Weise nach, dass die auf der Anmeldung dokumentierte und gegengezeichnete Ausnahme weiterhin nachvollziehbar ist; markiere nur den technischen Änderungsnachweis in Instacount als offene Vorgabe.
+7. Benenne ausdrücklich, dass kein anderer Ausnahmefall aus dieser Regel abgeleitet werden darf.
+
+### Teil C: nicht übersteuerbarer Stop
+
+In einer dritten Variante fehlt die für das konkrete Set gültige Bewertung der Herstellerangaben.
+
+Aufgaben:
+
+1. Stoppe den Ablauf und kennzeichne, dass keine Aufbereitung erfolgen darf.
+2. Weise die angebotene Freigabe durch eine simulierte Betriebsleitung zurück: Diese Voraussetzung ist nicht übersteuerbar.
+3. Erläutere, warum der Lieferschein-Ausnahmeweg hier nicht geöffnet werden darf.
 
 ## 14. Beobachtbare Kriterien für die spätere Praxisbestätigung
 
 Alle Kriterien beruhen auf der `fachlichen Auskunft 25.09.2026`, sind aber bis zur formalen standortübergreifenden Freigabe Bestandteil eines Entwurfs.
 
 - Die Person prüft Anmeldung, Lieferschein, Herstellerangaben, Bewertung und Vollständigkeit vor dem regulären Anlegen.
-- Sie stoppt bei einer fehlenden Voraussetzung und verwendet ausschließlich den freigegebenen Ausnahmeweg für einen fehlenden Lieferschein.
+- Sie stoppt ohne Übersteuerungsmöglichkeit und ohne Aufbereitung, wenn Anmeldung, Herstellerangaben oder Bewertung fehlen, ungültig oder nicht für das konkrete Set freigegeben sind.
+- Sie öffnet den Ausnahmeweg ausschließlich bei einem vorübergehend fehlenden Lieferschein und nur, wenn die nicht übersteuerbaren Voraussetzungen erfüllt sind.
 - Sie erkennt eine Leihset-Schablone an `-L-` und setzt die vorgegebenen Codebestandteile in der richtigen Reihenfolge zusammen.
-- Sie ermittelt im vorgegebenen Suchraum die nächste freie laufende Nummer; der verbindliche Suchraum ist noch festzulegen.
+- Sie ermittelt Fachbereich und Einsatzbereich aus Anmeldung und vorgesehenem Einsatz und prüft die verwendeten Kürzel unter `Stammdaten → Kostenstellen`; eine erforderliche Pflege eskaliert sie an eine berechtigte Rolle, statt sie als neue mitarbeitende Person selbst vorzunehmen.
+- Sie verwendet bei einem erstmals am Standort aufzubereitenden Leihset die nächste laufende Nummer im passenden Setcode-Bereich.
 - Sie übernimmt die Bezeichnung aus der Anmeldung.
 - Sie wählt die passende vorhandene Schablone und erzeugt daraus einen neuen Setdatensatz.
 - Sie verwendet im regulären Weg die Lieferscheinnummer als Seriennummer.
 - Sie prüft die Übernahme von Herstellerangaben und Bewertung und ergänzt Anmeldung, Lieferschein und Bilder am Set.
-- Sie führt beziehungsweise erläutert die Setfotografie als Vollständigkeitsdokumentation jedes Packvorgangs und nicht als einmaliges Stammdatenbild.
+- Sie führt beziehungsweise erläutert die Setfotografie als Vollständigkeitsdokumentation jedes Packvorgangs und nicht als einmaliges Stammdatenbild; bei mehreren Siebschalen kontrolliert sie für jede einzelne Siebschale eine separate Draufsicht und vorzugsweise blaues Vlies als Hintergrund.
 - Sie berechnet die Etikettenmenge als `1 + Containeranteil + Anzahl der Siebschalen` korrekt.
 - Sie führt die abschließende Kontrolle durch und kann die vorgesehenen Folgehandlungen benennen.
 - Sie löst das Set bei simulierter Rückgabe von der Schablone und setzt es auf `Gesperrt`.
-- Im Ausnahmefall fordert sie die Nachreichung an, holt die richtige Freigabe ein und verwendet `01` erst danach vorläufig.
+- Im Ausnahmefall fordert sie die Nachreichung an, holt die richtige Freigabe ein, verwendet `01` erst danach vorläufig und dokumentiert die Ausnahme auf der Anmeldung mit Gegenzeichnung.
+- Nach Eingang des Lieferscheins lässt sie `01` durch den zuständigen IMM-Mitarbeiter unmittelbar durch die tatsächliche Lieferscheinnummer ersetzen, prüft den Fortbestand der dokumentierten und gegengezeichneten Ausnahme und kennzeichnet nur den technischen Änderungsnachweis in Instacount als offene Vorgabe.
 - Sie erfindet keine zusätzlichen Ausnahmefälle und eskaliert offene Detailfragen.
 
-Die praktische Leistung darf nach der `fachlichen Auskunft 25.09.2026` ein erfahrener IMM-Mitarbeiter bestätigen. Alternativ darf die Leitung bestätigen, wenn sie den Ablauf selbst fachlich beherrscht. Die formalen Kriterien für Erfahrung und Fachbeherrschung bleiben festzulegen.
+Die praktische Leistung darf nach der `fachlichen Auskunft 25.09.2026` ein erfahrener IMM-Mitarbeiter bestätigen. Alternativ darf die Leitung bestätigen, wenn sie den Ablauf selbst fachlich beherrscht.
 
 `Plattformvorschlag` — Die Praxisbestätigung erfasst bestätigende Person und Rolle, Zeitpunkt, Standort/Geltungsbereich, Ergebnis und optional einen Kommentar.
 
@@ -288,8 +314,8 @@ Die praktische Leistung darf nach der `fachlichen Auskunft 25.09.2026` ein erfah
 Die Fortschrittsstufen sind `Plattformvorschlag` und bleiben getrennt:
 
 1. **Inhalt angesehen:** Inhalt wurde geöffnet; kein Kompetenznachweis.
-2. **Verständnis geprüft:** Verständnisfragen wurden nach dem noch festzulegenden Bestehenskriterium bearbeitet.
-3. **Übung bearbeitet:** Regulärer und Ausnahmefall wurden in der synthetischen Lernumgebung bearbeitet.
+2. **Verständnis geprüft:** Verständnisfragen wurden nach dem im Lerninterface konfigurierten Bestehenskriterium bearbeitet.
+3. **Übung bearbeitet:** Regulärer Weg, Lieferschein-Ausnahme und nicht übersteuerbarer Stop wurden in der synthetischen Lernumgebung bearbeitet.
 4. **Praxis bestätigt:** Eine zulässige bestätigende Rolle hat die beobachtete Leistung mit Zeitpunkt und Geltungsbereich dokumentiert.
 
 ## 16. Sichtbare Metadaten
@@ -304,7 +330,7 @@ Die Fortschrittsstufen sind `Plattformvorschlag` und bleiben getrennt:
 | Primärquelle | `Anlegen Set_Leih_überarbeitet.pdf`, PDF-Metadatum 06.03.2025, keine erkennbare Version/Freigabe | `quellenbelegt` als historischer Stand |
 | Lernpfadquelle | `F_05-04-01-09_Einarbeitungsplan IMM_2021-10-18.pdf`, Version 02 vom 18.10.2021, damaliger Status „Freigabe“, Geltungsbereich „alle AEMP“ | `quellenbelegt` als historischer Stand |
 | Quellenbefund | `docs/quellenbefunde/leihsets-anlegen.md` | zur fachlichen Prüfung vorlegen |
-| Praxisbestätigung | erfahrener IMM-Mitarbeiter; alternativ fachkundige Leitung | `fachliche Auskunft 25.09.2026`; formale Rollenkriterien offen |
+| Praxisbestätigung | erfahrener IMM-Mitarbeiter; alternativ fachkundige Leitung | `fachliche Auskunft 25.09.2026`; noch nicht formal standortübergreifend freigegeben |
 | Screenshotnutzung | Bereinigte Ausschnitte der Instacount-Oberfläche im internen Lerninterface zulässig | `fachliche Auskunft 25.09.2026`; Bereinigung und interne Nutzung sichtbar voraussetzen |
 
 ## 17. Verbleibende offene Detailfragen
@@ -313,13 +339,9 @@ Diese Fragen bleiben trotz der fachlichen Auskunft offen und müssen vor formale
 
 | Nr. | Offene Frage | Vorgeschlagene Rolle |
 | ---: | --- | --- |
-| 1 | Für welchen Bereich gilt die laufende Nummer, und wie werden Lücken oder Reservierungen behandelt? | IMM/Stammdatenmanagement |
-| 2 | Welche verbindliche Kürzelliste gilt, wer pflegt sie und wie werden Änderungen versioniert? | IMM/Stammdatenmanagement und QM |
-| 3 | Wann, durch wen und mit welchem Nachweis wird die vorläufige Seriennummer `01` ersetzt? | IMM/Stammdatenmanagement |
-| 4 | Wo und mit welchen Pflichtangaben wird die Ausnahmefreigabe dokumentiert? | Betriebsleitung und QM |
-| 5 | Welche Voraussetzungen dürfen niemals übersteuert werden? | AEMP-Leitung/Betriebsleitung und QM |
-| 6 | Gibt es weitere Ausnahmefälle? Bis zu deren Bestätigung werden keine angenommen. | Betriebsleitung, IMM und QM |
-| 7 | Welche genauen Fotoanforderungen gelten, insbesondere Anzahl, Perspektive, Qualität, Zuordnung und Aufbewahrung? | IMM, AEMP-Leitung und QM |
+| 1 | Wie wird die Änderung von `01` zur Lieferscheinnummer innerhalb von Instacount technisch beziehungsweise über eine Änderungshistorie nachvollzogen? | IMM/Stammdatenmanagement und Instacount-Administration |
+| 2 | Welche verbindlichen Vorgaben gelten zusätzlich für Bildqualität, Dateiformat und Aufbewahrungsdauer? | IMM, AEMP-Leitung und QM |
+| 3 | Wer erteilt die formale standortübergreifende Freigabe für den gesamten Ablauf? | QM und zuständige standortübergreifende Leitung |
 
 ## 18. Benötigte UI-Bausteine für die spätere Angular-Umsetzung
 
@@ -327,29 +349,30 @@ Alle Bausteine sind `Plattformvorschlag`; es wird in diesem Auftrag kein Angular
 
 - Statuskopf für `Entwurf`, fachliche Auskunft und ausstehende formale Freigabe
 - Metadatenkarte mit Rolle, Datum, Geltungsabsicht, Softwareversion und Quellen
-- Voraussetzungsgate mit Pflicht-Checkliste und nicht übersehbarem Stop-Zustand
-- eigener Ausnahmezweig „Lieferschein fehlt“ mit Freigabeanforderung und Protokollstatus
-- Setcode-Builder mit Segmenterklärung, Kürzellistenhinweis und Anzeige der nächsten freien Nummer
+- Voraussetzungsgate mit getrennten nicht übersteuerbaren und regulären Voraussetzungen sowie nicht übersehbarem Stop-Zustand
+- eigener Ausnahmezweig „Lieferschein fehlt“ mit Freigabeanforderung, Nachdokumentation/Gegenzeichnung, verpflichtender Seriennummernkorrektur durch den zuständigen IMM-Mitarbeiter und dauerhaft sichtbarem Ausnahmenachweis
+- Setcode-Builder mit Segmenterklärung, Prüfschritt `Stammdaten → Kostenstellen`, Eskalationshinweis zur berechtigten Kürzelpflege und nächster Nummer im passenden Setcode-Bereich
 - Vergleich „Bezeichnung aus Anmeldung“ zu den Setdaten
 - Schrittfolge/Stepper für Seterzeugung und Nacharbeiten
 - Quellen- und Statushinweis je fachlicher Aussage
 - Vergleichskomponente „aus Schablone übernommen“/„am Set ergänzt“
 - Etikettenrechner mit `1 + C + S`, Zwischensumme und Begründung
-- wiederkehrende Fotoaufgabe je Packvorgang mit Abgrenzung zum Stammdatenbild
+- wiederkehrende Fotoaufgabe je Packvorgang mit je einer Draufsicht pro Siebschale, bevorzugtem blauem Vlies, Vollständigkeitskontrolle aller Einzelaufnahmen und Abgrenzung zum Stammdatenbild
 - Platzhalter für bereinigte Instacount-Ausschnitte ohne reale Daten
 - Abschlusskontroll-Checkliste
 - Quiz für Einfachauswahl, Mehrfachauswahl und Etikettenberechnung
-- Übungssimulation mit regulärem Weg und Ausnahmezweig
+- Übungssimulation mit regulärem Weg, Lieferschein-Ausnahme und nicht übersteuerbarem Stop
 - Praxiskriterienliste und Praxisbestätigungsformular
 - getrennte Fortschrittsanzeigen für Inhalt, Verständnis, Übung und Praxis
-- Panel für die sieben offenen Detailfragen
+- Panel für die drei offenen Detailfragen
 
 ## 19. Abschlussprüfung des Entwurfs
 
 - Der fachliche Arbeitsstand vom 25.09.2026 ist von historischen PDF-Belegen und `Plattformvorschlag` getrennt.
 - Die formale standortübergreifende Freigabe bleibt sichtbar offen.
-- Fehlende Voraussetzungen sind Stop-Punkte; nur der fehlende Lieferschein hat einen gesonderten mitgeteilten Ausnahmeweg.
+- Fehlende, ungültige oder für das Set nicht freigegebene Anmeldung, Herstellerangaben oder Bewertung sind nicht übersteuerbare Stop-Punkte; eine Aufbereitung darf dann nicht erfolgen.
+- Nur der vorübergehend fehlende Lieferschein hat einen gesonderten mitgeteilten Ausnahmeweg mit Freigabe, Nachdokumentation, Gegenzeichnung und verpflichtender unmittelbarer Korrektur von `01` durch den zuständigen IMM-Mitarbeiter; der Ausnahmenachweis bleibt nachvollziehbar.
 - Es wurden keine weiteren Ausnahmefälle ergänzt.
-- Setcode, Etikettenberechnung und wiederkehrende Vollständigkeitsfotografie sind eigene Lernabschnitte.
-- Verständnisfragen, synthetische Übung und Praxiskriterien bilden regulären Weg und Ausnahmeweg ab.
+- Setcode einschließlich Kostenstellen-Stammdatenprüfung ohne Pflegeauftrag an neue Mitarbeitende, Etikettenberechnung und wiederkehrende Vollständigkeitsfotografie jeder einzelnen Siebschale sind eigene Lernabschnitte.
+- Verständnisfragen, synthetische Übung und Praxiskriterien bilden regulären Weg, Lieferschein-Ausnahme und nicht übersteuerbaren Stop ab.
 - Es wurden keine realen Kunden-, Patienten-, Hersteller-, Mitarbeiter- oder Setdaten und keine vollständigen Quellscreenshots übernommen.
